@@ -6,7 +6,8 @@ bst_t *bst_delete(bst_t *root, bst_t *node);
 bst_t *inorder_successor(bst_t *root);
 
 /**
- * bst_remove - Removes a node with a specific value from a Binary Search Tree (BST)
+ * bst_remove - Removes a node with a specific value
+ * from a Binary Search Tree (BST)
  * @root: Pointer to the root node of the BST
  * @value: Value to be removed from the BST
  *
@@ -18,12 +19,14 @@ bst_t *bst_remove(bst_t *root, int value)
 }
 
 /**
- * bst_remove_recursive - Recursively removes a node with a specific value from a BST
+ * bst_remove_recursive - Recursively removes a node
+ * with a specific value from a BST
  * @root: Pointer to the root node of the BST
  * @node: Current node being processed in the BST
  * @value: Value to be removed from the BST
  *
- * Return: Pointer to the root node of the modified BST after the removal operation
+ * Return: Pointer to the root node of the modified BST after
+ * the removal operation
  */
 bst_t *bst_remove_recursive(bst_t *root, bst_t *node, int value)
 {
@@ -43,7 +46,8 @@ bst_t *bst_remove_recursive(bst_t *root, bst_t *node, int value)
  * @root: Pointer to the root node of the BST
  * @node: Node to be deleted from the BST
  *
- * Return: Pointer to the root node of the modified BST after the deletion operation
+ * Return: Pointer to the root node of the modified
+ * BST after the deletion operation
  */
 bst_t *bst_delete(bst_t *root, bst_t *node)
 {
