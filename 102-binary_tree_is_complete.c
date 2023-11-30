@@ -8,11 +8,10 @@ void push(binary_tree_t *node, levelorder_queue_t *head,
 void pop(levelorder_queue_t **head);
 
 /**
- * binary_tree_is_complete - Checks if a binary tree is complete.
+ * binary_tree_is_complete - Checks if a binary tree is complete
+ * @tree: Pointer to the root node of the binary tree
  *
- * @tree: A pointer to the root node of the tree to check.
- *
- * Return: 0 if tree is NULL.
+ * Return: 1 if the tree is complete, 0 otherwise
  */
 int binary_tree_is_complete(const binary_tree_t *tree)
 {
@@ -57,12 +56,10 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 }
 
 /**
- * create_node - Creates a new levelorder_queue_t node.
+ * create_node - Creates a new node for level-order traversal
+ * @node: Pointer to a binary tree node
  *
- * @node: The binary tree node for the new node to contain.
- *
- * Return: If an error occurs, NULL.
- *         Otherwise, a pointer to the new node.
+ * Return: Pointer to the newly created node
  */
 levelorder_queue_t *create_node(binary_tree_t *node)
 {
@@ -79,9 +76,10 @@ levelorder_queue_t *create_node(binary_tree_t *node)
 }
 
 /**
- * free_queue - Frees a levelorder_queue_t queue.
+ * free_queue - Frees memory allocated for a level-order traversal queue
+ * @head: Pointer to the head of the queue
  *
- * @head: A pointer to the head of the queue.
+ * Return : void.
  */
 void free_queue(levelorder_queue_t *head)
 {
@@ -96,13 +94,12 @@ void free_queue(levelorder_queue_t *head)
 }
 
 /**
- * push - Pushes a node to the back of a levelorder_queue_t queue.
+ * push - Adds a node to a level-order traversal queue
+ * @node: Pointer to the node to be added
+ * @head: Pointer to the head of the queue
+ * @tail: Pointer to the tail of the queue
  *
- * @node: The binary tree node to print and push.
- * @head: A double pointer to the head of the queue.
- * @tail: A double pointer to the tail of the queue.
- *
- * Description: Upon malloc failure, exits with a status code of 1.
+ * Return : void.
  */
 void push(binary_tree_t *node, levelorder_queue_t *head,
 		levelorder_queue_t **tail)
@@ -120,9 +117,10 @@ void push(binary_tree_t *node, levelorder_queue_t *head,
 }
 
 /**
- * pop - Pops the head of a levelorder_queue_t queue.
+ * pop - Removes the front node from a level-order traversal queue
+ * @head: Pointer to a pointer to the head of the queue
  *
- * @head: A double pointer to the head of the queue.
+ * Return : void.
  */
 void pop(levelorder_queue_t **head)
 {
