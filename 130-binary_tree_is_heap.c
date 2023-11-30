@@ -25,8 +25,8 @@ int binary_tree_is_heap(const binary_tree_t *tree)
  * their children's values
  * @tree: Pointer to the root of the binary tree
  *
- * Return: 1 if the parent values are greater than or equal to their children's values,
- * 0 otherwise.
+ * Return: 1 if the parent values are greater than or equal
+ * to their children's values, 0 otherwise.
  */
 int check_parent(const binary_tree_t *tree)
 {
@@ -58,7 +58,8 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 }
 
 /**
- * tree_is_complete - Checks if a binary tree satisfies the complete tree property
+ * tree_is_complete - Checks if a binary tree
+ * satisfies the complete tree property
  * @tree: Pointer to the root of the binary tree
  * @i: Current index of the node being checked
  * @cnodes: Total number of nodes in the tree
