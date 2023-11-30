@@ -4,11 +4,10 @@ int heap_extract(heap_t **root);
 void recurse_extract(heap_t *tree);
 heap_t *max(heap_t *tree);
 /**
- * heap_extract - Extracts the root node of a Max Binary Heap.
+ * heap_extract - Extracts the root value from a heap
+ * @root: Pointer to the root node of the heap
  *
- * @root: A double pointer to the root node of heap.
- *
- * Return: The value stored in the root node.
+ * Return: Extracted root value (integer)
  */
 int heap_extract(heap_t **root)
 {
@@ -29,9 +28,10 @@ int heap_extract(heap_t **root)
 }
 
 /**
- * recurse_extract - Recursively extracts the max from the tree.
+ * recurse_extract - Recursively adjusts the heap after element extraction
+ * @tree: Pointer to the current node in the heap
  *
- * @tree: The pointer to the root of the tree.
+ * @tree: Pointer to the current node in the heap
  */
 void recurse_extract(heap_t *tree)
 {
@@ -58,11 +58,10 @@ void recurse_extract(heap_t *tree)
 }
 
 /**
- * max - Finds the maximum node in a tree.
+ * max - Finds the node with the maximum value in the heap subtree
+ * @tree: Pointer to the root node of the heap subtree
  *
- * @tree: The pointer to the root of the tree.
- *
- * Return: The node with the maximum value.
+ * Return: Pointer to the node with the maximum value in the subtree
  */
 heap_t *max(heap_t *tree)
 {
